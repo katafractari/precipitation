@@ -1,0 +1,4 @@
+{
+  "locationsUrl": "http://www.meteo.si/uploads/probase/www/observ/surface/text/sl/observation_si/index.html",
+  "dataUri": "http://www.meteo.si/uploads/probase/www/observ/surface/text/sl/recent/observationAms_%s_history.xml"
+}
