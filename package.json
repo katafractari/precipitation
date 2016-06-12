@@ -4,6 +4,10 @@
   "version": "0.0.1",
   "main": "precipitation.js",
   "author": "Rok Pergarec <rok@parabola.si>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katafractari/precipitation"
+  },
   "license": "MIT",
   "dependencies": {
     "config": "^1.20.1",
@@ -11,6 +15,7 @@
     "nedb": "^1.8.0",
     "node-schedule": "^1.1.0",
     "request-promise": "^3.0.0",
+    "winston": "^2.2.0",
     "x-ray": "^2.3.0",
     "xml2js": "^0.4.16"
   },

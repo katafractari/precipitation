@@ -35,7 +35,7 @@ function bundle() {
         // Add transformation tasks to the pipeline here.
         .pipe(uglify()) // minify
         .pipe(sourcemaps.write('./')) // writes .map file
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./public/js'));
 }
 
 // static web server w/ livereload

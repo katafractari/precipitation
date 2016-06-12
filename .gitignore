@@ -1,6 +1,6 @@
 .idea/
 datastore
-js/
+public/js/
 node_modules/
 tmp/
 .npm-debug.log
