@@ -1,11 +1,12 @@
 'use strict';
 
+var async = require('async');
 var request = require('request-promise');
 var xml2js = require('xml2js');
 var fs = require('fs');
 
-var processResponse = function (response, location) {
-    winston.log('debug', 'Processing location data for ' + location._id);
+var processResponse = function (response, location, callback) {
+winston.log('info', 'Processing location data for ' + location._id);
     xml2js.parseString(response, function (err, result) {
         if (err) {
             console.error(err);
@@ -35,7 +36,8 @@ var processResponse = function (response, location) {
             db.update(
                 { _id: location._id },
                 { $set: data },
-                { upsert: true }
+                { upsert: true },
+                callback
             );
         });
     })
@@ -50,10 +52,10 @@ var calculateTotalPrecipitation = function (input) {
 
 var update = function() {
     db.find({}, function (err, docs) {
-        docs.forEach(function (doc) {
+        async.forEachSeries(docs, function(doc, callback) {
             request(doc.url)
                 .then(function (response) {
-                    processResponse(response, doc)
+                    processResponse(response, doc, callback)
                 })
                 .catch(function (err) {
                     throw err;

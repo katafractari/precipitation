@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "config": "^1.20.1",
     "express": "^4.13.4",
     "nedb": "^1.8.0",
@@ -35,6 +36,7 @@
   },
   "scripts": {
     "test": "jasmine-node spec",
+    "watch": "gulp",
     "run": "node app.js"
   },
   "browserify": {
