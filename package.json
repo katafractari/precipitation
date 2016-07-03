@@ -2,7 +2,7 @@
   "name": "precipitation",
   "description": "Show past precipitation",
   "version": "0.0.1",
-  "main": "precipitation.js",
+  "main": "app.js",
   "author": "Rok Pergarec <rok@parabola.si>",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
   "scripts": {
     "test": "jasmine-node spec",
     "watch": "gulp",
-    "run": "node app.js"
+    "start": "node app.js"
   },
   "browserify": {
     "transform": [
