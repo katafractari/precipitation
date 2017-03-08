@@ -1,4 +1,4 @@
-# Precipitation :droplet: :droplet: :droplet:
+# Precipitation :droplet::droplet::droplet:
 
 A map of Slovenia that shows the amount of rainfall for the last 48 hours.
 
