@@ -1,0 +1,7 @@
+version: '3'
+services:
+  precipitation:
+    image: precreg.azurecr.io/precipitation:latest
+    container_name: precipitation
+    ports:
+        - "80:9090"
